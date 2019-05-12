@@ -18,7 +18,7 @@ class Game {
                     $newPosition = $currentPosition + 1;
                     $shots = 0;
                 } else {
-                    echo $shots . " slokken drinken!\n";
+                    //echo $shots . " slokken drinken!\n";
                     $newPosition = 0;
                     
                 }
@@ -28,7 +28,7 @@ class Game {
                     $newPosition = $currentPosition + 1;
                     $shots = 0;
                 } else {
-                    echo $currentPosition . " slokken drinken!\n";
+                    //echo $currentPosition . " slokken drinken!\n";
                     $newPosition = 0;
                 }
                 break;
@@ -38,7 +38,7 @@ class Game {
                     $shots = 0;
                 } else {
                     $currentPosition *= 2;
-                    echo $currentPosition . " slokken drinken!\n";
+                    //echo $currentPosition . " slokken drinken!\n";
                     $newPosition = 0;
                 }
                 break;
@@ -73,9 +73,15 @@ class Game {
         $lowerChance = round($lowerCards / $totalCards * 100, 2);
         $sameValueChance = round($sameValueCards / $totalCards * 100, 2);
         
-        echo "Kans dat kaart hoger is: " . $higherChance . "%\n";
-        echo "Kans dat kaart lager is: " . $lowerChance . "%\n";
-        echo "Kans op paal: " . $sameValueChance . "%\n\n";
+        // echo "Kans dat kaart hoger is: " . $higherChance . "%\n";
+        // echo "Kans dat kaart lager is: " . $lowerChance . "%\n";
+        // echo "Kans op paal: " . $sameValueChance . "%\n\n";
+
+        if ($higherChance >= $lowerChance) {
+            return "hoger";
+        } else {
+            return "lager";
+        }
     }
 
     function setShots($shots) {
@@ -95,17 +101,16 @@ class Game {
     }
 
     function checkGameOver($field) {
-        if ($field->position == 7) {
-            echo "Eruit!";
-            exit();
+        if ($field->position >= 7) {
+            return true;
         }
     }
 
     function checkNewDeck($deck) {
-        if ($deck->getDeckCount() == 0) {
+        if ($deck->getDeckCount() <= 0) {
             //TODO: new deck
-            echo "Deck op!";
-            exit();
+            //echo "Deck op!";
+            return true;
         }
     }
 }
