@@ -8,7 +8,8 @@ require_once("Field.php");
 /**
  * Runs the game
  */
-class Game {
+class Game
+{
     private $gameState = "playing";
     private $player;
     private $deck;
@@ -16,12 +17,13 @@ class Game {
     private $statCounter;
 
 
-    function __construct() {
+    public function __construct()
+    {
         $this->player = new Player;
         $this->deck = new Deck;
 
         $cardsForField = [];
-        for ($i = 0; $i < 7; $i++) { 
+        for ($i = 0; $i < 7; $i++) {
             $cardsForField[] = $this->deck->takeCard();
         }
         $this->field = new Field($cardsForField);
@@ -29,7 +31,8 @@ class Game {
     }
 
 
-    function makeMove($choice) {
+    public function makeMove($choice)
+    {
         //store card values in variables for later comparision
         $newCard = $this->deck->takeCard();
         $newCardValue = $newCard->getValue();
