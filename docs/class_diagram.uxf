@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>390</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+-gameState: String
+-player: Object
+-field: Object
+-deck: Object
+-statCounter: Object
+--
+__construct()
+checkChoice(choice)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>70</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+-cards: Array
+--
+__construct()
+takeCard()
+countCardsInDeck()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>130</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+m2=1..52
+consists of &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>70</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+-value: Int
+-suit: String
+--
+getValue()
+getSuit()
+setValue()
+setSuit()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>260</y>
+      <w>70</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..n
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>390</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-position: Int
+--
+getPosition()
+nextPosition()
+resetPosition()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>990</x>
+      <y>390</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>Field
+--
+-cards: Array
+--
+__construct(cards)
+addCard(card, position)
+getCard(position)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>470</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+m2=
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>470</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=
+m2=
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>260</y>
+      <w>70</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=7
+&lt; has</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>630</x>
+      <y>710</y>
+      <w>210</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>statCounter
+--
+-deckCount: Int
+-turnCount: Int
+-shotCount: Int
+--
+getDeckCount()
+getShotCount()
+getTurnCount()
+calculateChance()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>720</x>
+      <y>580</y>
+      <w>70</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=-
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+</diagram>
