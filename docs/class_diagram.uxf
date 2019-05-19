@@ -18,8 +18,7 @@
 -statCounter: Object
 --
 __construct()
-checkChoice(choice)
-
+makeMove()
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -169,7 +168,7 @@ m1=7
       <w>210</w>
       <h>200</h>
     </coordinates>
-    <panel_attributes>statCounter
+    <panel_attributes>StatCounter
 --
 -deckCount: Int
 -turnCount: Int
@@ -178,7 +177,10 @@ m1=7
 getDeckCount()
 getShotCount()
 getTurnCount()
-calculateChance()</panel_attributes>
+addDeckToCount()
+addTurnToCount()
+addShotsToCount(amount)
+calculateChance(deck, field, player)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
