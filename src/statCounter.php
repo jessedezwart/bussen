@@ -1,35 +1,43 @@
 <?php
 
-class StatCounter {
+class StatCounter
+{
     private $deckCount;
     private $turnCount;
     private $shotCount;
 
-    function getDeckCount() {
+    public function getDeckCount()
+    {
         return $this->deckCount;
     }
 
-    function getTurnCount() {
+    public function getTurnCount()
+    {
         return $this->turnCount;
     }
 
-    function getShotCount() {
+    public function getShotCount()
+    {
         return $this->shotCount;
     }
 
-    function addDeckToCount() {
+    public function addDeckToCount()
+    {
         $this->deckCount += 1;
     }
 
-    function addTurnToCount() {
+    public function addTurnToCount()
+    {
         $this->turnCount += 1;
     }
 
-    function addShotsToCount($amount) {
+    public function addShotsToCount($amount)
+    {
         $this->shotCount += $amount;
     }
 
-    function calculateChance($deck, $field, $player) {
+    public function calculateChance($deck, $field, $player)
+    {
         //TODO: this function
     }
 }
