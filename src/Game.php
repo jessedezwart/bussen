@@ -1,9 +1,8 @@
 <?php
-require_once("Player.php");
-require_once("Card.php");
-require_once("Deck.php");
-require_once("Field.php");
-//require_once("statCounter.php");
+namespace Bussen;
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 
 /**
  * Runs the game

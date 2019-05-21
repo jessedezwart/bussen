@@ -1,5 +1,5 @@
 <?php
-
+namespace Bussen;
 
 class Card
 {

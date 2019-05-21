@@ -1,5 +1,8 @@
 <?php
-require_once("Card.php");
+namespace Bussen;
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
 
 class Deck
 {

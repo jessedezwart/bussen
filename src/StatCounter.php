@@ -1,4 +1,5 @@
 <?php
+namespace Bussen;
 
 class StatCounter
 {
